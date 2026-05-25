@@ -6,6 +6,7 @@ Criei os arquivos nginx.conf e default.conf para o balanceador de carga e també
 
 Digitei os comandos abaixo para criar 6 containers (1 balanceador de carga e 5 nodes)
 
+'''
 docker run -d --name loadBalancer \
   -p 80:80 \
   -v /home/journey/repos/censo-escolar-react-loadbalancer/loadbalancer/nginx.conf:/etc/nginx/nginx.conf \
@@ -41,3 +42,4 @@ docker run -d --name node5 \
     -v /home/journey/repos/censo-escolar-react-loadbalancer/nodes/default.conf:/etc/nginx/conf.d/default.conf \
 	-v /home/journey/repos/censo-escolar-react-loadbalancer/dist:/usr/share/nginx/html \
 	nginx:latest
+'''
